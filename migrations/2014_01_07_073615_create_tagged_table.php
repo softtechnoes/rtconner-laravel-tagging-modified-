@@ -11,7 +11,7 @@ class CreateTaggedTable extends Migration {
 			if(config('tagging.primary_keys_type') == 'string') {
 				$table->string('taggable_id', 36)->index();
 			} else {
-				$table->integer('taggable_id')->unsigned()->index();
+				$table->string('taggable_id')->index();
 			}
 			$table->string('taggable_type', 125)->index();
 			$table->string('tag_name', 125);
